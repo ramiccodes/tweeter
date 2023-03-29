@@ -95,3 +95,7 @@ p .fa-solid {
 .circle-arrow:hover {
   color: green;
 }
+
+.tweet:hover {
+  box-shadow: 5px 10px #9e9e9ee6;
+}
