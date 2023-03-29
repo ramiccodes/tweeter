@@ -1,0 +1,97 @@
+.tweet {
+  border: 5px solid black;
+  background-color: #f4f1ec;
+  margin-top: 3em;
+  height: 12em;
+}
+
+.user-info {
+  display: flex;
+  height: 3em;
+  width: 100%;
+  /* border: 5px solid blue; */
+  background-color: #f4f1ec;
+  background-image: none;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px; 
+}
+
+
+.user p, .handle p {
+  color: black;
+  font-size: 25px;
+}
+
+.handle p {
+  color: lightgray;
+  font-weight: bold;
+}
+
+.username {
+  margin-left: -60px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.handle {
+  margin-right: 20px;
+}
+
+p .fa-solid {
+  font-size: 50px;
+  color: black;
+}
+
+.tweet-body {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.3em;
+  font-weight: bold;
+  margin-top: 1.5em;
+}
+
+.tweet-info {
+  display: flex;
+  font-size: 20px;
+  border-top: 5px solid black;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-top: 2.5em;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.days-ago p {
+  padding: 0;
+  margin: 0;
+  margin-top: 0.5em;
+  margin-left: 20px;
+}
+
+.tweet-icons {
+  display: flex;
+  margin-top: 0.5em;
+}
+
+.flag, .circle-arrow, .heart {
+  color: black;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.flag:hover {
+  color: blue;
+}
+
+.heart:hover {
+  color: red;
+}
+
+.circle-arrow:hover {
+  color: green;
+}

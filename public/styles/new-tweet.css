@@ -1,0 +1,41 @@
+section {
+  display: flex;
+  background-color: #f4f1ed;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  width: 100%;
+}
+
+label {
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+#tweet-text {
+  border: none;
+  border-bottom: 5px solid black;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+  margin-top: -0.5em;
+  height: 2em;
+}
+
+.submit {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5em;
+}
+
+.submit button {
+  cursor: pointer;
+  background-color: #4256a2;
+  font-family: "Bungee", sans-serif;
+  color: #FFFFFF;
+  outline: inherit;
+}
