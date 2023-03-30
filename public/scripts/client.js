@@ -6,24 +6,14 @@
 
 
 $(() => {
-
-  const renderTweets = function() {
-    $.ajax({
-      method: "GET",
-      url: '/tweets',
-    }).then((tweets) => {
-
-      $('.tweets').empty();
-
-      for (const tweet of tweets) {
-        const $tweet = createTweetElement(tweet);
-        $('.tweets').prepend($tweet);
-      }
-    });
-  }
-
   const createTweetElement = (obj) => {
-    let $tweet = $(`
+    const escape = function (str) {
+      let div = document.createElement("div");
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
+
+    let $tweet = `
     <article class="tweet">
       <header class="user-info">
         <div class="user">
@@ -34,7 +24,7 @@ $(() => {
           <p>${obj.user.handle}</p>
         </div>
       </header>
-      <div class="tweet-body">${obj.content.text}</div>
+      <div class="tweet-body">${escape(obj.content.text)}</div>
       <footer class="tweet-info">
         <div class="days-ago">
           <p>${timeago.format(obj.created_at)}</p>
@@ -45,12 +35,29 @@ $(() => {
           <i class="fa-solid fa-heart heart"></i>
         </div>
       </footer>
-    </article>`);
+    </article>`;
 
     return $tweet;
   }
+
+  const renderTweets = function(tweets) {
+    $('.tweets').empty();
+
+    for (const tweet of tweets) {
+      const $tweet = createTweetElement(tweet);
+      $('.tweets').prepend($tweet);
+    }
+}
+
+  const loadTweets = () => {
+    $.ajax({
+      method: "GET",
+      url: '/tweets',
+    }).then((tweets) => {
+      renderTweets(tweets);
+  });
+}
   
-  renderTweets();
 
   const $form = $('#form');
 
@@ -65,8 +72,12 @@ $(() => {
       method: "POST",
       url: "/tweets/",
       data: urlEncoded
-    }).then((response) => {
-      renderTweets();
+    }).then(() => {
+      loadTweets();
     })
   })
+
+  loadTweets();
+
 });
+
