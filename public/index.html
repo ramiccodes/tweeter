@@ -24,9 +24,13 @@
     
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    
+    <!-- TimeAgo library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+
   </head>
 
   <body>
@@ -51,7 +55,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <form method="POST" action="/tweets/">
+        <form id="form" method="POST" action="/tweets/">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text" maxlength="140"></textarea>
           <div class="submit">
@@ -59,30 +63,10 @@
             <output name="counter" id="counter" for="tweet-text">140</output>
           </div>
         </form>
+        <div class="tweets">
+
+        </div>
       </section>
-      <article class="tweet">
-        <header class="user-info">
-          <div class="user">
-            <!-- <i class="fa-solid fa-user user-icon"></i> -->
-            <p><i class="fa-solid fa-circle-user"></i></p>
-            <p class="username">Newton</p>
-          </div>
-          <div class="handle">
-            <p>@SirIsaac</p>
-          </div>
-        </header>
-        <div class="tweet-body">If I have seen further, it is by standing on the shoulders of giants.</div>
-        <footer class="tweet-info">
-          <div class="days-ago">
-            <p>10 days ago</p>
-          </div>
-          <div class="tweet-icons">
-            <i class="fa-solid fa-flag flag"></i>
-            <i class="fa-solid fa-retweet circle-arrow"></i>
-            <i class="fa-solid fa-heart heart"></i>
-          </div>
-        </footer>
-      </article>
     </main>
   </body>
   <script src="/scripts/composer-char-counter.js"></script>

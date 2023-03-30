@@ -99,3 +99,8 @@ p .fa-solid {
 .tweet:hover {
   box-shadow: 5px 10px #9e9e9ee6;
 }
+
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+}

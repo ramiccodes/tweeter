@@ -17,5 +17,4 @@ $("#tweet-text").on("keyup", function(e) {
     $("#counter").addClass('over');
   }
   $("#counter").html(remaining);
-  console.log(remaining);
 })
