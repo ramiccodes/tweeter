@@ -57,7 +57,6 @@ $(() => {
       renderTweets(tweets);
   });
 }
-  
 
   const $form = $('#form');
 

@@ -1,0 +1,16 @@
+.error {
+  border: 3px solid red;
+  margin-top: 1.5em;
+  border-radius: 5px;
+  display: none;
+}
+
+#error-message {
+  text-align: center;
+  font-family: "Bungee";
+  font-weight: bold;
+}
+
+.enable-error {
+  display: block;
+}
