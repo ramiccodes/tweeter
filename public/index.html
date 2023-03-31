@@ -44,35 +44,37 @@
         <i class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
-    <header class="page-header">
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <p><strong>Amy</strong> Mansell</p>
-      </div>
-    </header>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <div class="error">
-          <p id="error-message">ERROR</p>
+    <div class="content">
+      <header class="page-header">
+        <div>
+            <img src="/images/profile-hex.png"> 
         </div>
-        <form id="form" method="POST" action="/tweets/">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text" maxlength="140" required></textarea>
-          <div class="submit">
-            <button type="submit">Tweet</button>
-            <output name="counter" id="counter" for="tweet-text">140</output>
+        <br>
+        <div>
+            <p><strong>Amy</strong> Mansell</p>
+        </div>
+      </header>
+
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <div class="error">
+            <p id="error-message">ERROR</p>
           </div>
-        </form>
-        <div class="tweets">
+          <form id="form" method="POST" action="/tweets/">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text" maxlength="140" required></textarea>
+            <div class="submit">
+              <button type="submit">Tweet</button>
+              <output name="counter" id="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+          <div class="tweets">
 
-        </div>
-      </section>
-    </main>
+          </div>
+        </section>
+      </main>
+    </div>
   </body>
   <script src="/scripts/composer-char-counter.js"></script>
 </html>

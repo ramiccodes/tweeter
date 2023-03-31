@@ -16,3 +16,20 @@ header p {
   color: #FFFFFF;
   font-size: 36px;
 }
+
+@media (min-width: 1024px) {
+  .content {
+    display: flex;
+  }
+
+  .container {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+  .page-header {
+    width: 25em;
+    margin-left: 2em;
+    margin-top: 2em;
+  }
+}
