@@ -18,6 +18,6 @@ This repository is the starter code for the project: Students will fork and clon
 - Node 5.10.x or above
 
 ## Screenshots
-!["Desktop View"][https://github.com/ramiccodes/tweeter/blob/master/docs/desktop-view.JPG?raw=true]
-!["Desktop View with Error"][https://github.com/ramiccodes/tweeter/blob/master/docs/desktop-view-error.JPG?raw=true]
-!["Mobile View"][https://github.com/ramiccodes/tweeter/blob/master/docs/mobile-view.JPG?raw=true]
+!["Desktop View"](https://github.com/ramiccodes/tweeter/blob/master/docs/desktop-view.JPG?raw=true)
+!["Desktop View with Error"](https://github.com/ramiccodes/tweeter/blob/master/docs/desktop-view-error.JPG?raw=true)
+!["Mobile View"](https://github.com/ramiccodes/tweeter/blob/master/docs/mobile-view.JPG?raw=true)
