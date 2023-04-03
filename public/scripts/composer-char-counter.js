@@ -3,7 +3,7 @@ $(document).ready(function() {
   const $error = $('.error');
   const $errorMessage = $('#error-message');
 
-  $("#tweet-text").on("keyup", function(e) {
+  $("#tweet-text").on("keydown", function(e) {
     if (e.key === "Backspace") {
       let length = $(this).val().length;
       let remaining = maxLength + length;
