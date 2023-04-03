@@ -4,7 +4,7 @@ $(document).ready(function() {
   const $errorMessage = $('#error-message');
 
   // An event handler that listens when the user presses down on a character on the keyboard
-  $("#tweet-text").on("keydown", function(e) {
+  $("#tweet-text").on("input", function(e) {
     // If the event's key passed is "Backspace", add the length of the text the user typed in to the max length and display that
     // text on the on screen character counter.
     if (e.key === "Backspace") {

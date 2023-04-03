@@ -88,6 +88,9 @@ $(() => {
     }).then(() => {
       loadTweets();
     })
+    .fail((err) => {
+      console.log(err);
+    })
   })
 
   loadTweets();
