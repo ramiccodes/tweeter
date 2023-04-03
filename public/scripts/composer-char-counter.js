@@ -5,13 +5,6 @@ $(document).ready(function() {
 
   // An event handler that listens when the user presses down on a character on the keyboard
   $("#tweet-text").on("input", function(e) {
-    // If the event's key passed is "Backspace", add the length of the text the user typed in to the max length and display that
-    // text on the on screen character counter.
-    if (e.key === "Backspace") {
-      let length = $(this).val().length;
-      let remaining = maxLength + length;
-      $("#counter").text(remaining);
-    }
 
     let length = $(this).val().length;
     let remaining = maxLength - length
