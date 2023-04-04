@@ -19,5 +19,6 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 !["Desktop View"](https://github.com/ramiccodes/tweeter/blob/master/docs/desktop-view.JPG?raw=true)
-!["Desktop View with Error"](https://github.com/ramiccodes/tweeter/blob/master/docs/desktop-view-error.JPG?raw=true)
+!["Desktop View with Max Error"](https://github.com/ramiccodes/tweeter/blob/master/docs/desktop-view-max-error.JPG?raw=true)
+!["Desktop View with Empty Error"](https://github.com/ramiccodes/tweeter/blob/master/docs/desktop-view-delete-error.JPG?raw=true)
 !["Mobile View"](https://github.com/ramiccodes/tweeter/blob/master/docs/mobile-view.JPG?raw=true)
