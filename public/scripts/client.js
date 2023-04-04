@@ -90,6 +90,7 @@ $(() => {
       url: "/tweets/",
       data: urlEncoded
     }).then(() => {
+      // If the length of the text area is equals or exceeds 140 characters, show error message and return, so that the tweet cannot be POSTed
       if ($textarea.val().length >= 140) {
         $error.slideDown("slow", function() {
           $errorMessage.text("You went over the max character limit!!!")
@@ -97,11 +98,13 @@ $(() => {
         });
         return;
       }
+      // Resets the form inital state without the text and the counter rest to the max value of 140 characters
       $("#form").trigger("reset");
       $("#counter").text(140);
       loadTweets();
     })
     .fail((err) => {
+      // If there are no characters in the text area, show error message
       if (!$textarea.val()) {
         $error.slideDown("slow", function() {
           $errorMessage.text("You can't submit an empty tweet!!!")
