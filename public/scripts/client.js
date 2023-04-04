@@ -6,6 +6,9 @@
 
 
 $(() => {
+  const $textarea = $('#tweet-text');
+  const $error = $('.error');
+  const $errorMessage = $('#error-message');
   // A function that takes in an object as parameter to be used to generate the dynamic elements of this HTML template
   const createTweetElement = (obj) => {
     // An escape function that is called upon the tweet body to prevent XSS attacks done on the form submission
@@ -86,12 +89,17 @@ $(() => {
       url: "/tweets/",
       data: urlEncoded
     }).then(() => {
-      $("#tweet-text").text('')
       $("#form").trigger("reset");
       $("#counter").text(140);
       loadTweets();
     })
     .fail((err) => {
+      if (!$textarea.val()) {
+        $error.slideDown("slow", function() {
+          $errorMessage.text("You can't submit an empty tweet!!!")
+          $error.addClass('enable-error')
+        })
+      }
       console.log(err);
     })
   })
