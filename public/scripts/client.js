@@ -9,6 +9,7 @@ $(() => {
   const $textarea = $('#tweet-text');
   const $error = $('.error');
   const $errorMessage = $('#error-message');
+
   // A function that takes in an object as parameter to be used to generate the dynamic elements of this HTML template
   const createTweetElement = (obj) => {
     // An escape function that is called upon the tweet body to prevent XSS attacks done on the form submission
@@ -89,6 +90,13 @@ $(() => {
       url: "/tweets/",
       data: urlEncoded
     }).then(() => {
+      if ($textarea.val().length >= 140) {
+        $error.slideDown("slow", function() {
+          $errorMessage.text("You went over the max character limit!!!")
+          $error.addClass('enable-error')
+        });
+        return;
+      }
       $("#form").trigger("reset");
       $("#counter").text(140);
       loadTweets();
