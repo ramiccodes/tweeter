@@ -86,6 +86,9 @@ $(() => {
       url: "/tweets/",
       data: urlEncoded
     }).then(() => {
+      $("#tweet-text").text('')
+      $("#form").trigger("reset");
+      $("#counter").text(140);
       loadTweets();
     })
     .fail((err) => {
